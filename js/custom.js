@@ -1,0 +1,19 @@
+$(document).ready(function(){
+     $(".correctbox").hide();
+     $(".incorrectbox").hide();
+    $("button").click(function(){
+      $(".incorrectbox").fadeIn(300);
+      $("body").addClass('active');
+    });
+    $("button.correct").click(function(){
+        $(".incorrectbox").hide();
+        $(".correctbox").fadeIn(300);
+        $("body").addClass('active');
+        $(".que_select").addClass('checkans');
+      });
+      
+      $(".close").click(function(){
+        $(".correctbox").fadeOut(300);
+        $(".incorrectbox").fadeOut(300);
+      });
+});
